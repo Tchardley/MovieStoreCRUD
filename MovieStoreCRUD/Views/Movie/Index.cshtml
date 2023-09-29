@@ -1,0 +1,32 @@
+﻿
+@model List<MovieStoreCRUD.Models.Movie>
+
+    <h1>Movie</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Movie Length</th>
+                <th>Year</th>
+                <th>Rating</th>
+                <th></th>
+            </tr>
+
+        </thead>
+       <tbody>
+           @foreach(var movie in Model)
+           {
+            <tr>
+                <td>@movie.Id</td>
+                <td>@movie.Name</td>
+                <td>@movie.MovieLength</td>
+                <td>@movie.Year.ToString("dd-MM-yyyy")</td>
+                <td>@movie.StarRating</td>
+                <td><a href="Movie/View/@movie.Id"><button class="btn btn-primary">View</button></a></td>
+            </tr>
+            
+        }
+        
+       </tbody>
+    </table>

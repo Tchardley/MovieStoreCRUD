@@ -1,0 +1,23 @@
+﻿@model MovieStoreCRUD.Models.MovieViewModel
+
+<h1>Add Movie</h1>
+<form method="post" action="Add" class="mt-5">
+  <div class="mb-3">
+    <label for="" class="form-label">Name</label>
+    <input type="text" class="form-control" asp-for="Name">
+  </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Movie Length</label>
+        <input type="text" class="form-control" asp-for=MovieLength>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Year</label>
+        <input type="date" class="form-control" asp-for="Year">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Rating</label>
+        <input type="text" class="form-control" asp-for="StarRating">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
